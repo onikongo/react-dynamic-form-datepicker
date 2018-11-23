@@ -1,0 +1,10 @@
+.react-datepicker-wrapper {
+    display:       block;
+    margin-bottom: 10px;
+}
+.react-datepicker-wrapper .react-datepicker__input-container {
+    display: block;
+}
+.react-datepicker-wrapper .react-datepicker__input-container .rdf-input {
+    margin-bottom: 0;
+}
