@@ -32,7 +32,10 @@ const FormDatePicker = ({ name, placeholder, value, valid, onChange }) => {
 
     const className = classNames([
         'rdf-input',
-        { 'input-invalid': !!valid },
+        { 
+            'input-invalid': !valid,
+            'input-valid': valid
+        },
     ]);
 
     return (
