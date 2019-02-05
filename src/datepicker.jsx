@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import Util from '@ninetynine/util';
 
-const FormDatePicker = ({ name, placeholder, value, valid, onChange }) => {
+const FormDatePicker = ({ name, placeholder, value, valid, onChange, datePickerProps }) => {
     const onInternalChange = date => {
         const event = document.createEvent('Event');
         const value = date.toISOString()
@@ -32,9 +32,9 @@ const FormDatePicker = ({ name, placeholder, value, valid, onChange }) => {
 
     const className = classNames([
         'rdf-input',
-        { 
+        {
             'input-invalid': !valid,
-            'input-valid': valid
+            'input-valid': valid,
         },
     ]);
 
@@ -44,6 +44,7 @@ const FormDatePicker = ({ name, placeholder, value, valid, onChange }) => {
             placeholderText={placeholder || 'Select a date'}
             selected={Util.isEmpty(value) ? null : new Date(value)}
             onChange={onInternalChange}
+            {...datePickerProps}
         />
     );
 };
@@ -54,6 +55,7 @@ FormDatePicker.defaultProps = {
     value: null,
     valid: true,
     onChange: () => null,
+    datePickerProps: {},
 };
 
 FormDatePicker.propTypes = {
@@ -62,6 +64,7 @@ FormDatePicker.propTypes = {
     value: PropTypes.string,
     valid: PropTypes.bool,
     onChange: PropTypes.func,
+    datePickerProps: PropTypes.object,
 };
 
 export { FormDatePicker as default };
