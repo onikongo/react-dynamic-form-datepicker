@@ -1,6 +1,6 @@
 {
   "name": "@ninetynine/react-dynamic-form-datepicker",
-  "version": "1.1.0",
+  "version": "2.0.0",
   "description": "An addon to the react-dynamic-form-builder repository created by langleyfoxall",
   "main": "dist/datepicker.js",
   "scripts": {
@@ -28,13 +28,13 @@
     "react": "^16.6.0"
   },
   "devDependencies": {
-    "@babel/cli": "^7.1.0",
-    "@babel/core": "^7.1.0",
-    "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/plugin-proposal-object-rest-spread": "^7.5.5",
     "@babel/preset-react": "^7.0.0"
   },
   "dependencies": {
-    "@babel/polyfill": "^7.0.0",
-    "react-datepicker": "^2.0.0"
+    "@babel/polyfill": "^7.4.4",
+    "react-datepicker": "^2.8.0"
   }
 }
