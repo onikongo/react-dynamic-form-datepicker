@@ -7,7 +7,7 @@ import Util from '@ninetynine/util';
 const FormDatePicker = ({ name, placeholder, value, valid, onChange, datePickerProps }) => {
     const onInternalChange = date => {
         const event = document.createEvent('Event');
-        const value = date.toISOString()
+        const value = date.toString()
             .slice(0, 19)
             .replace('T', ' ');
 
